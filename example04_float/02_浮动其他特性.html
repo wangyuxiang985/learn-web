@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        /* 浮动元素不会覆盖文字，文字会自动环绕在浮动元素周围，利用浮动元素可以设置文字环绕图片效果 */
+        float: left;
+    }
+    .box2{
+        background-color: green;
+        /* 
+        元素设置浮动以后，将会从文档流中脱离，从文档流中脱离以后，元素的一些特性也会发生变化
+
+        脱离文档流的特点：
+            块元素：
+                1、块元素不再独占一行
+                2、脱离文档流以后，块元素的宽度和高度默认被内容撑开
+            
+            行元素：
+                行内元素脱离文档流后会变成块元素，特点和块元素一样
+            脱离文档流后不再区分行元素和块元素。
+         */
+        float: left;
+    }
+    .box3{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+    span{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        float: right;
+    }
+
+</style>
+
+<body>
+    <!-- <div class="box1"></div>
+    <p>11111111111111111111122222222222222333dfjadkfjakdfjkdjfkfdafadffadfljkjdf发发快递放假放假考虑对方的看法嘉陵道街发动机疯狂的肌肤可见浮动空间的开发健康减肥肯定就快放假快点放假可见狂了</p> -->
+
+    <div class="box2">hello</div>
+    <div class="box3"></div>
+    <span>wo shi span</span>
+</body>
+</html>
