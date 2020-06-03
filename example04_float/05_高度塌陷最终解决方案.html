@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .box1{
+        border: 10px red solid;
+    }
+
+    .box2{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        float: left;
+    }
+    /* 方案一：在box1所在div最后添加一个空的div元素，设置clear属性（不推荐：结构去解决css展示问题）
+        方案二：利用css在元素末尾追加一个元素并转为块元素设置clear属性（推荐）
+     */
+     .box1::after{
+         content: "";
+         display: block;
+         clear: both;
+     }
+
+</style>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
