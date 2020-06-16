@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <style>
-
+    body{
+        height: 2000px;
+    }
     div{
         font-size: 60px;
     }
@@ -56,6 +58,10 @@
                 3.唯一不同的是，固定定位永远都是参照与浏览器的视口进行定位
                 4.固定定位的元素不会随网页的滚动条滚动
 
+            -粘滞定位：
+                1.元素的position属性值为sticky
+                2.粘滞定位和相对定位的特点基本一致，不同的是粘滞定位可以在元素到达某个位置时固定
+
             -偏移量（offset）
                 当元素开启定位以后，可以通过偏移量来设置元素位置   
                 
@@ -69,9 +75,8 @@
                     -定位元素和定位位置右边的距离
 
          */
-         position: fixed;
+         position: sticky;
          top: 0px;
-         left: 200px;
          
     }
     .box3{
