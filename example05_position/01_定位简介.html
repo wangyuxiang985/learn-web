@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    div{
+        font-size: 60px;
+    }
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+    .box2{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* 
+        目标：将第二个div移动到第一个div的右边
+
+        定位(position)
+            -通过定位可以讲元素摆放到页面任意位置；
+            -使用position属性来设置定位
+                可选值：
+                    static 默认值，元素是静止的没有开启定位
+                    relative 开启元素的相对定位
+                    absolute 开启元素的绝对定位
+                    sticky 开启元素的粘滞定位
+            
+            -相对定位：
+                1.元素的position属性值为relative时开启
+                2.开启元素的相对定位以后如果不设置元素的偏移量元素不会发生任何变化
+                3.相对位置是参照元素在文档流中的位置
+                4.相对定位不会使元素脱离文档流
+            
+            -偏移量（offset）
+                当元素开启定位以后，可以通过偏移量来设置元素位置   
+                
+                top
+                    -定位元素和定位位置上边的距离
+                bottom
+                    -定位元素和定位位置下边的距离
+                left
+                    -定位元素和定位位置左边的距离
+                right
+                    -定位元素和定位位置右边的距离
+
+         */
+         position: relative;
+         top: -300px;
+         left: 200px;
+    }
+    .box3{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+    }
+
+</style>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>
