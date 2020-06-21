@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    /* 
+        缺点：
+            加载速度慢，可能存在版权问题
+     */
+    @font-face {
+        /* 指定字体别名，供下面引用 */
+        font-family: 'myfont';
+        /* 指定字体在服务器路径，供浏览器加载 */
+        src: url('字体在服务器路径');
+    } 
+    
+
+    p{
+        /* 
+        字体相关样式：
+            color: 用来设置字体颜色
+            font-size: 用来设置字体大小
+                和font-size相关的单位：
+                    em：相当于当前元素的一个font-size
+                    rem：相当于根元素的一个font-size
+            font-family：字体族（字体格式）
+                可选值：
+                    serif：衬线字体
+                    sans-serif：非衬线字体
+                    monospace：等宽字体
+                        -指定字体的类别，浏览器会自动使用该类别下的字体
+                font-family：可同时指定多个字体，多个字体间使用,间隔
+                    字体生效时默认使用第一个，第一个无法使用则使用第二个，依此类推 
+                    font-family: 'Courier New', Courier, monospace; 
+
+         */
+        color: red;
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+</style>
+<body>
+    <p>你好，世界！Hello World!</p>
+</body>
+</html>
