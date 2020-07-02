@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    table{
+        width: 50%;
+        border: 1px solid black;
+        margin: 0 auto;
+        /* border-spacing: 指定边框之间的距离 */
+        /* border-spacing: 0px; */
+
+        /* border-collapse: collapse; 设置边框的合并 */
+        border-collapse: collapse;
+    }
+
+    td{
+        border: 1px solid black;
+        height: 100px;
+        /* 默认情况元素在表格中是垂直居中的; */
+        vertical-align: top;
+        text-align: top;
+    }
+
+/* 如果表格中没有使用tbody而是直接使用tr，浏览器会自动创建一个tbody包裹tr，所以tr是tbody的子元素 */
+    tbody > tr:nth-child(2n){
+        background-color: green;
+    }
+
+</style>
+<body>
+    <table>
+        <tr>
+            <td>序号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>李四</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>王五</td>
+            <td>30</td>
+        </tr>
+    </table>
+</body>
+</html>
