@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--设置css style ,对p标签生效，效果会被单独设置了内联样式的覆盖-->
+    
+    
+    <style>
+        p{
+            color:green;
+            font-size: 30px;
+         } 
+    </style>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!--
+        网页三部分：
+        结构：html
+        表现：css
+        行为：JavaScript
+
+        CSS：层叠样式表
+    -->
+    <!--
+        css改变样式
+        第一种：在标签内通过style属性来设置标签的样式
+        缺点：使用内联样式，只能影响一个标签，当样式变化时，不方便维护
+        
+        第二种：将样式编写到head中的style标签里
+            然后通过CSS选择器，来选中元素并设置各种样式，可同时为多标签设置，
+            但是效果会被单独设置了内联样式的覆盖
+        缺点：内部样式表只能对一个网页起作用，里面的样式不能跨页面复用
+
+        第三种：外部样式表
+            将CSS样式编写到一个外部的CSS文件中，然后通过link标签引入外部CSS样式
+            可以使用网页缓存机制，加快加载速度
+        
+        
+        这三种，后加载的会覆盖前面的样式，标签内联样式最优先展示，二三看加载顺序
+    -->
+    <p style="color: red; font-size: 20px;">少小离家老大回，乡音未改鬓毛衰</p>
+
+    <p>离离原上草</p>
+    <p>天气好好哦</p>
+</body>
+</html>
