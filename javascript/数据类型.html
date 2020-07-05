@@ -19,12 +19,42 @@
     // alert(str)
 
     //typeof 用来检查变量的类型
-    var a = 123;
-    var b = "123";
-    console.log(typeof a)
-    console.log(typeof b)
+    // var a = 123;
+    // var b = "123";
+    // console.log(typeof a)
+    // console.log(typeof b)
 
-    //
+    //强制类型转换
+    /*
+    转为String
+    方式一：调用toString()方法
+
+    方式二：调用String()函数
+    */
+    /*
+    转为Number
+    方式一：调用Number()函数
+    方式二：专门处理字符串转数字,其他类型调用这两个函数，会先转换为String，在进行转换
+    parseInt() 函数，转为整数
+    parseFloat() 函数，转为浮点型
+    */
+
+    /*
+    其他类型转Boolean调用Boolean()函数
+    数字转boolean：除了 0 和 NaN 其他都是 true
+    字符串转boolean：除了空串，其他都是true
+    null 和 undefined 都是false
+    对象也会转换为true
+    */
+    
+    var a = "123.11aaa";
+    // a = a.toString();
+    // a = parseInt(a);
+    a = parseFloat(a)
+    console.log(typeof a);
+    console.log(a);
+
+    console
 
     </script>
 </head>
