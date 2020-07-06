@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+    
+    var obj = new Object();
+    //属性名可以是任何值，但是如果要采用特殊的属性名，不能使用.来设置，应该采用 ["属性名"]=xxx
+    //属性值可以是任意值
+    // 属性名 in 对象  检测对象中是否含有指定的属性名 有：true
+    obj["1"]=123;
+    
+    obj.name = "张三";
+    obj.age = 14;
+    obj.sex = "男";
+
+    //删除对象中属性
+    // delete obj.name
+
+    console.log(typeof obj);
+    console.log(obj)
+    console.log("name" in obj)
+
+    //创建对象的第二种方式 var obj = {}  / var obj = {name:"xxx"}
+    var obj2 = {name:"李四",age:12};
+    console.log(typeof obj2);
+    console.log(obj2)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
