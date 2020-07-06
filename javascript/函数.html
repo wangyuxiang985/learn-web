@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //函数 三种创建方式 
+        //方式一 var xxx = new Function("函数体")
+        // var fun = new Function("console.log('hello world!');");
+
+        //方式二
+        // function 函数名([行参一，行参二，...]){}
+        // function fun(n){
+        //     console.log("hello world!!!");
+        //     console.log(n);
+        // }
+
+        //方式三 匿名函数赋值给一个变量
+        //var 函数名 = function([行参一，行参二，...]){};
+        var fun = function(n){
+            console.log("hello world !!!!!!");
+            console.log(n);
+        };
+        
+        //函数使用 xxx()
+        fun(1);
+        
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
