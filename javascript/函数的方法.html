@@ -22,7 +22,23 @@
         // fun(1,2);
         var obj = {name:"obj",age:12}
         // fun.call(obj,1,2);
-        fun.apply(obj,[1,2]);
+        // fun.apply(obj,[1,2]);
+
+        /*
+        调用函数时，浏览器每次都会传递进两个隐含的参数
+            1. 函数的上下文对象this
+            2.封装实参的对象 arguments
+                arguments是一个类数组对象，可以通过索引来操作数据，也可以获取长度
+        */
+
+        function fun2(){
+            console.log(arguments);
+            console.log(Array.isArray(arguments));
+            console.log(arguments.length);
+            console.log(arguments[0]);
+        }
+
+        fun2("hello");
 
     </script>
 </head>
