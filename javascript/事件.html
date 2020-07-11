@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //window.onload 函数可以保证页面加载完了在执行内部的代码，
+        // window.onload = function(){
+        //     var but = document.getElementById("mybutton");
+        //     // 为id为mybutton的按钮绑定单击事件
+        //     but.onclick = function(){
+        //     alert("你单击了我一下");
+        //     }
+        // };
+    </script>
+</head>
+<body>
+    <button id = "mybutton" class="but">简简单单button</button>
+    <button id = "mybutton2" class="but"> 简简单单button22222</button>
+
+
+    <script>
+        //获取id为mybutton的节点
+        var but = document.getElementById("mybutton")
+        // 为id为mybutton的按钮绑定单击事件
+        but.onclick = function(){
+            alert("你单击了我一下");
+
+            //获取class属性值为but的节点类数组形式接受 
+            //innerHTML 用于获取元素内部html代码的，对于自结束标签没有意义
+            //如果需要读取元素节点属性，直接使用 元素.属性名
+            //例：元素.id 元素.name
+            //获取class属性需要使用 元素.className
+            var lis = document.getElementsByClassName("but");
+            for(var i = 0; i<lis.length;i++){
+                alert(lis[i].innerHTML)
+                alert(lis[i].id)
+            }
+
+        }
+    
+        
+    </script>
+</body>
+</html>
