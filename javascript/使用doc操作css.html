@@ -31,9 +31,20 @@
                 box1.style.backgroundColor = "blue";
 
                 //获取当前页面展示的
-                var obj = getComputedStyle(box1, null);
-                console.log(typeof obj)
-                console.log(obj.width)
+                // var obj = getComputedStyle(box1, null);
+                // console.log(typeof obj)
+                // console.log(obj.width)
+                alert(getStyle(box1,"width"));
+            }
+
+            function getStyle(obj, name){
+                if(window.getComputedStyle){
+                    //支持getComputedStyle属性的浏览器
+                    return getComputedStyle(obj)[name];
+                }else {
+                    //不支持此属性的，例如ie8
+                    return obj.currentStyle[name];
+                }
             }
 
         }
