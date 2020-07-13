@@ -33,6 +33,7 @@
             //例：元素.id 元素.name
             //获取class属性需要使用 元素.className
             var lis = document.getElementsByClassName("but");
+            //for循环一上来就先执行完了，里面的点击事件最后执行
             for(var i = 0; i<lis.length;i++){
                 alert(lis[i].innerHTML)
                 alert(lis[i].id)

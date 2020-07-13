@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+
+            //点击按钮修改box1的大小
+            //获取box1的div
+            var box1 = document.getElementById("box1");
+
+            //获取button
+            var but = document.getElementById("but");
+
+            but.onclick = function(){
+                //修改box1的大小,修改的样式会应用到内联样式中优先显示，但是如果设置了 !important 则无法生效个
+                //语法： 元素.style.样式名 = 样式值;
+                box1.style.width = "300px";
+                box1.style.height = "300px";
+                box1.style.backgroundColor = "blue";
+
+                //获取当前页面展示的
+                var obj = getComputedStyle(box1, null);
+                console.log(typeof obj)
+                console.log(obj.width)
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <button id="but">点我改变</button>
+    <br>
+    <div id="box1"></div>
+</body>
+</html>
