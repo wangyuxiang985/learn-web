@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+        }
+    </style>
     <script>
         window.onload = function(){
             /*
@@ -43,10 +51,39 @@
                     return false;//取消默认行为
                 }
             }
+
+            /*
+            按上下左右箭头，移动div块
+            */
+            var box1 = document.getElementById("box1");
+            document.onkeydown = function(event){
+                event = event || window.event;
+                //左37，上38，右39，下40
+                // console.log(event.keyCode);
+                var speed = 10;
+
+                switch(event.keyCode){
+                    case 37 :
+                        box1.style.left = box1.offsetLeft - speed + "px";
+                        break;
+                    case 39 :
+                        box1.style.left = box1.offsetLeft + speed + "px";
+                        break;
+                    case 30 :
+                        box1.style.top = box1.offsetTop - speed + "px";
+                        break;
+                    case 40 :
+                        box1.style.top = box1.offsetTop + speed + "px";
+                        break;
+
+                }
+
+            }
         }
     </script>
 </head>
 <body>
     <input type="text">
+    <div id="box1"></div>
 </body>
 </html>
