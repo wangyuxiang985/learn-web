@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            /*
+            键盘事件：
+                onkeydown：
+                    按键被按下
+                    对于onkeydown事件来说，按键一直被按下不松手，事件一直触发
+                    连续触发时，第一次第二次间隔稍大，其他间隔很快，这是为了防止误触发生
+                
+                onkeyup：
+                    按键被松开
+            键盘事件一般都会绑定在可以获取到焦点的对象或者是document
+
+            可以通过事件对象的keycode来获取按键的编码，通过编码可以判断按下的是哪一个键
+            除了keycode还提供了三个属性
+                altKey
+                ctrlKey
+                shiftKey
+            这三个属性用来判断alt/ctrl/shift是否被按下，如果按下返回true，否则返回false
+            */
+            // document.onkeydown = function(event){
+            //     event = event || window.event;
+
+            //     //判断y和ctrl是否同时被按下
+            //     if(event.keyCode === 89 && event.ctrlKey){
+            //         console.log("ctrl+y")
+            //     }
+            // }
+            var tx = document.getElementsByTagName("input")[0];
+            tx.onkeydown = function(evevt){
+                evevt = evevt || window.event;
+                //输入框不让输入数字
+                // console.log(evevt.keyCode);
+                if(evevt.keyCode >= 48 && evevt.keyCode <= 58){
+
+                    //如果在onkeydown中取消了默认行为，则输入的内容不会出现在输入框
+                    return false;//取消默认行为
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text">
+</body>
+</html>
