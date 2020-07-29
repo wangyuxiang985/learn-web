@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function(){
+        /*
+            setInterval()
+                -定时调用
+                -可以将传入的函数每个一段时间调用一次
+                -参数：
+                    1.回调函数，该函数每个一段时间执行一次
+                    2.每次调用间隔的时间，单位：毫秒
+                -返回值：
+                    返回一个Number类型的数据，作为定时器的唯一标识
+            
+            clearInterval()
+                -关闭指定定时器
+                -参数：setInterval()方法的返回值
+
+        */
+        var count = document.getElementById("count");
+        var num = 1;
+
+        var timer = setInterval(function(){
+            count.innerHTML = num++;
+            if(num === 20){
+                clearInterval(timer);
+            }
+        }, 300);
+        alert(timer)
+
+    }
+</script>
+<body>
+    <h1 id="count"></h1>
+</body>
+</html>
