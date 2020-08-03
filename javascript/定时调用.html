@@ -20,6 +20,14 @@
             clearInterval()
                 -关闭指定定时器
                 -参数：setInterval()方法的返回值
+                -可以接收任意参数，如果参数是一个有效的定时器标识，则停止对应的定时器，如果参数不是一个有效的标识，则什么也不做
+            
+            setTimeout()
+                -延时调用，延时调用一个函数不立马执行，而是等一定时间再执行，且只执行一次
+            clearTimeout()
+                -关闭一个延时调用
+            
+            定时调用和延时调用是可以相互替代的
 
         */
         var count = document.getElementById("count");
